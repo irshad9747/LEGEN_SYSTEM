@@ -180,7 +180,7 @@ const HeroSection = () => {
           </div>
           <div ref={ctaRightRef}>
             <a
-              href="tel:+97400000000"
+              href="tel:+12317743468"
               className="flex items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-4 bg-white/5 border border-white/10 text-primary-light font-medium rounded-full btn-hover hover:bg-white/10 transition-colors"
             >
               <Phone size={20} />

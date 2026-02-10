@@ -191,7 +191,7 @@ const ConsultationSection = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+974 0000 0000"
+                        placeholder="+1 (231) 774-3468"
                         className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-[#070A12] border border-white/10 text-primary-light placeholder:text-secondary-light/30 focus:border-[#4F6DFF]/50 focus:ring-2 focus:ring-[#4F6DFF]/10 outline-none transition-all"
                       />
                     </div>
