@@ -80,15 +80,18 @@ const DemoSection = () => {
       setShowDialog(true);
 
       const agentId = import.meta.env.VITE_RETELL_AGENT_ID;
-      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
 
       if (!agentId || agentId === 'YOUR_AGENT_ID_HERE') {
         console.error('Please set VITE_RETELL_AGENT_ID in your .env file');
         return;
       }
 
-      // Fetch access token from backend
-      const response = await fetch(`${backendUrl}/create-web-call`, {
+      // Fetch access token from backend - works for both local and Vercel production
+      const apiEndpoint = import.meta.env.PROD
+        ? '/api/create-web-call'
+        : `${import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'}/create-web-call`;
+
+      const response = await fetch(apiEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
