@@ -81,10 +81,7 @@ const DemoSection = () => {
 
       const agentId = import.meta.env.VITE_RETELL_AGENT_ID || 'agent_feec06aac5c5f41b7497892a86';
 
-      if (!agentId || agentId === 'YOUR_AGENT_ID_HERE') {
-        console.error('Please set VITE_RETELL_AGENT_ID in your .env file');
-        return;
-      }
+      console.log('Using Agent ID:', agentId);
 
       // Fetch access token from backend - works for both local and Vercel production
       const apiEndpoint = import.meta.env.PROD
