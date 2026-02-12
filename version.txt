@@ -1,0 +1,6 @@
+This is a version check file. 
+Current Version: 1.0.4
+Last Updated: 2026-02-12
+Purpose: Forcing Vercel to see the new code and bypass cache.
+The fallback Agent ID is now hardcoded in src/sections/DemoSection.tsx.
+If you see this file in the 'Source' tab of Vercel, the sync is working.
